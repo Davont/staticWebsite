@@ -1,0 +1,52 @@
+@charset "utf-8";
+i{vertical-align:middle;}
+body{
+	font:12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+/*行高1.5倍*/
+a{text-decoration:none;}
+.clearfix:after{
+	display:block;
+	content:"";
+	clear:both;
+}
+i{
+	vertical-align:middle;
+	font-style: normal;
+}
+.ml20{margin-left:20px;}
+.ml10{margin-left:10px;}
+.mr40{margin-right:40px;}
+.mr20{margin-right:20px;}
+.mr1{margin-right:1px;}
+.mb{margin-bottom:10px;}
+.c-9{color:#999;}
+.fl{float:left;}
+.fr{float:right;}
+.mlr{margin:0 10px;}
+.wl1230{width:1230px;margin:0 auto;}
+.underline:hover{text-decoration:underline}
+.borderright{border-right:1px dashed #eee;}
+.ls{letter-spacing: 0.5em;}
+.c-427{color:#427def !important;}
+.c-6347{color:#6347ed !important;}
+.c-427-h:hover>a{color:#427def !important;}
+.c-427-a-h a:hover{color:#427def !important;}
+.c-6347-h:hover>a{color:#6347ed !important;}
+.c-6347-a-h a:hover{color:#6347ed !important;}
+.c-fa5c5c-h:hover>a{color:#fa5c5c !important;}
+.c-fa5c5c-a-h a:hover{color:#fa5c5c !important;}
+.c-fa5c5c{color:#fa5c5c !important;}
+.c-f7a831-h:hover>a{color:#f7a831 !important;}
+.c-f7a831-a-h a:hover{color:#f7a831 !important;}
+.c-f7a831{color:#f7a831 !important;}
+.c-dd2727-h:hover>a{color:#dd2727 !important;}
+.c-dd2727-a-h a:hover{color:#dd2727 !important;}
+.c-dd2727{color:#dd2727 !important;}
+.c-3bc7b0-h:hover>a{color:#3bc7b0 !important;}
+.c-3bc7b0-a-h a:hover{color:#3bc7b0 !important;}
+.c-3bc7b0{color:#3bc7b0 !important;}
+.c-0AA6E8{background-color:#0AA6E8 !important;}
+.c-00B262{background-color:#00B262 !important;}
+.c-19C8A9{background-color:#19C8A9 !important;}
+.c-F15453{background-color:#F15453 !important;}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="keywords" content="商城,网上购物,网购,进口食品,美容护理,母婴玩具,家用电器,手机数码,家居生活,服饰内衣,营养保健,钟表珠宝,饰品箱包,汽车生活,图书音像,礼品卡">
+  <meta name="description" content="天猫，中国线上购物的地标网站，亚洲超大的综合性购物平台，拥有10万多品牌商家。每日发布大量国内外商品！正品网购，上天猫！天猫千万大牌正品,品类全，一站购，支付安全，退换无忧！理想生活上天猫!">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <title>天猫tmall.com--理想生活上天猫</title>
+ </head>
+ <body>
+	<div id="wrap">
+		<div id="header">
+			<div class="h-topbar">
+				<div class="h-tb-box clearfix">
+					<ul class="h-left-nav fl">
+						<li class="c-9">喵，欢迎来天猫</li>
+						<li class="ml20"><a href="#" class="c-9">请登录</a></li>
+						<li class="ml20"><a href="#" class="c-9">免费注册</a></li>
+					</ul>
+					<ul class="h-rg-nav fr">
+						<li class="h-bor">
+							<a href="#" class="c-9 down underline">我的淘宝</a>
+							<div class="h-item c-9">
+								<a href="#" class="c-9">已买到的宝贝</a>
+								<a href="#" class="c-9">已卖出的宝贝</a>
+							</div>
+						</li>
+						<li><a href="#" class="c-9"><i class="iconfont icon-31gouwuche"></i>购物车0件</a></li>
+						<li class="h-collection h-bor">
+							<a href="#" class="c-9 down underline">收藏夹</a>
+							<div class="h-c-item c-9">
+								<a href="#" class="c-9">收藏的宝贝</a>
+								<a href="#" class="c-9">收藏的店铺</a>
+							</div>
+						</li>
+						<li class="h-mobile">
+							<a href="#" class="c-9"><i class="iconfont icon-shouji"></i>手机版</a>
+							<div class="h-mobile-item">
+								<div class="h-pic"></div>
+								<div class="h-text"></div>
+							</div>
+						</li>
+						<li><a href="#" class="c-9">淘宝网</a></li>
+						<li class="h-seller h-bor">
+							<a href="#" class="c-9 down underline">商家支持</a>
+							<div class="h-support">
+								<div class="h-s-shopper clearfix">
+									<h3>商家</h3>
+									<ul class="fl">
+										<li><a href="#">商家中心</a></li>
+										<li><a href="#">商家入驻</a></li>
+										<li><a href="#">商家品控</a></li>
+										<li><a href="#">天猫智库</a></li>
+									</ul>
+									<ul class="fl"> 
+										<li><a href="#">天猫规则</a></li>
+										<li><a href="#">运营服务</a></li>
+										<li><a href="#">商家工具</a></li>
+										<li><a href="#">喵言喵语</a></li>
+									</ul>
+								</div>
+								<div class="h-s-help">
+									<h3>帮助</h3>
+									<ul>
+										<li><a href="#">帮助中心</a></li>
+										<li><a href="#">问商家</a><li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="h-site-nav h-bor">
+							<a href="#" class="c-9"><i class="iconfont icon-liebiao"></i>网站导航</a>
+							<div class="h-menu clearfix">
+								<div class="h-m-item fl">
+									<h3>热点推荐 Hot</h3>
+									<ul class="fl mr40">
+										<li><a href="#">天猫超市</a></li>
+										<li><a href="#">内衣新品</a></li>
+										<li><a href="#">吃乐会</a></li>
+									</ul>
+									<ul class="fl mr40">
+										<li><a href="#">喵鲜生</a></li>
+										<li><a href="#">试美妆</a></li>
+										<li><a href="#">企业采购</a></li>
+									</ul>
+									<ul class="fl">
+										<li><a href="#">科技新品</a></li>
+										<li><a href="#">运动新品</a></li>
+										<li><a href="#">会员积分</a></li>
+									</ul>
+									<ul class="fl mr40">
+										<li><a href="#">女装新品</a></li>
+										<li><a href="#">时尚先生</a></li>
+										<li><a href="#">天猫国际</a></li>
+									</ul>
+									<ul class="fl mr40">
+										<li><a href="#">酷玩街</a></li>
+										<li><a href="#">精明妈咪</a></li>
+										<li><a href="#">品质频道</a></li>
+									</ul>
+								</div>
+								<div class="h-m-item fl">
+									<h3>行业市场 Market</h3>
+									<ul class="fl mr40">
+										<li><a href="#">美妆</a></li>
+										<li><a href="#">美妆 男装 女鞋男鞋 </a></li>
+										<li><a href="#">家装</a></li>
+									</ul>
+									<ul class="fl mr40">
+										<li><a href="#">电器</a></li>
+										<li><a href="#">内衣</a></li>
+										<li><a href="#">医药</a></li>
+									</ul>
+									<ul class="fl">
+										<li><a href="#">女装</a></li>
+										<li><a href="#">箱包</a></li>
+										<li><a href="#">食品</a></li>
+
+									</ul>
+									<ul class="fl mr40">
+										<li><a href="#">男装</a></li>
+										<li><a href="#">运动</a></li>
+										<li><a href="#">配饰</a></li>
+									</ul>
+									<ul class="fl mr40">
+										<li><a href="#">女鞋</a></li>
+										<li><a href="#">母婴</a></li>
+										<li><a href="#">汽车</a></li>
+									</ul>
+								</div>
+									<ul class="fl">
+										<li><a href="#">天猫超市</a></li>
+										<li><a href="#">天猫超市</a></li>
+										<li><a href="#">天猫超市</a></li>
+										<li><a href="#">天猫超市</a></li>
+										<li><a href="#">天猫超市</a></li>
+									</ul>
+								</div>
+							</div>
+
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="h-content wl1230">
+				<div class="h-logo">
+					<h1>
+						<img src="img/logo.png" alt="天猫"/>
+					</h1>
+				</div>
+				<div class="h-search">
+					<form action="#" id="search">
+						<input type="text" placeholder="搜索 天猫 商品/平铺"/>
+						<input type="submit" value="搜索"/>
+					</form>
+					<div class="h-sub">
+						<a href="#" class="p0 cred">针织衫</a>
+						<a href="#">羽绒服</a>
+						<a href="#">四件套</a>
+						<a href="#" class="cred">电动牙刷</a>
+						<a href="#">客厅灯</a>
+						<a href="#">口红</a>
+						<a href="#">手机</a>
+						<a href="#" class="cred">运动鞋</a>
+						<a href="#" class="bor">牛奶</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content"></div>
+		<div id="foot"></div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,18 @@
+/*主页即搜索框的css文件，目前不完善且不规范，之后会继续更新*/
+.center-xy{
+    margin:20% 30%; /*输入框居中*/
+}
+/*logo样式调节*/
+.logo {
+    position:absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 35%;
+    width: 200px;
+    height: 10px;
+}
+/*输入框高度扩充*/
+.higher{
+    height: 1.3rem;
+}

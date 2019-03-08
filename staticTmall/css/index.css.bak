@@ -1,0 +1,257 @@
+@charset "utf-8";
+#wrap{
+	width:100%;
+}
+#header .h-topbar{
+	position:relative;
+	z-index:20;
+	width:100%;
+	background-color:#f2f2f2;
+}
+.h-topbar .h-tb-box{
+	width:1230px;
+	margin:0 auto;
+} 
+.h-tb-box li{
+	float:left;
+	line-height:32px;
+}
+.h-tb-box .h-rg-nav li{
+	position:relative;
+	padding:0 12px;
+}
+.h-tb-box .h-rg-nav li i{
+	line-height:12px;
+	font-size:12px;
+	color:red;
+	padding:2px;
+}
+.h-tb-box .h-rg-nav .down:after{
+	position:absolute;
+	right:4px;
+	top:1.25em; 
+	display:block;
+	content:"";
+	width:0;
+	height:0;
+	border:4px solid rgba(0,0,0,0);
+	border-top-color:#999;
+}
+.h-tb-box .h-rg-nav .h-bor{
+	border-left:1px solid rgba(0,0,0,0);
+	border-right:1px solid rgba(0,0,0,0);	
+}
+.h-tb-box .h-rg-nav .h-bor:hover{
+	background-color:white;
+	border-left:1px solid #eee;
+	border-right:1px solid #eee;
+}
+.h-tb-box .h-rg-nav .h-bor:hover .h-item{
+	display:block;
+}
+.h-rg-nav li .h-item{
+	position:absolute;
+	top:31px;
+	left:-1px;
+	z-index:-1;
+	display:none;
+	width:100%;
+	padding:8px 10px;
+	border:1px solid #eee;
+	line-height:20px;
+	background-color:white;
+}
+.h-tb-box li:hover>a{
+	color:red;
+}
+.h-rg-nav .h-bor .h-item a:hover{
+	color:red;
+	text-decoration:underline;
+}
+.h-rg-nav li .h-c-item a{
+	display:block;
+}
+.h-rg-nav li .h-c-item{
+	top:31px;
+	left:-1px;
+	z-index:-1;
+	padding:8px 10px;
+	line-height:20px;
+	width:120%;
+	display:none;
+}
+.h-rg-nav .h-c-item a:hover{
+	color:red;
+	text-decoration:underline;
+}
+.h-rg-nav .h-collection:hover .h-c-item{
+	display:block;
+}
+.h-rg-nav .h-site-nav .h-menu{
+	position:absolute;
+	display:none;
+	top:31px;
+	z-index:-1;    
+	right:0;
+	width:1180px;
+	padding:30px 0;
+	border:1px solid #eee;
+	background-color:white;
+}
+.h-rg-nav .h-site-nav:hover .h-menu{
+	display:block;
+}
+.h-collection{
+	position:relative;
+}
+.h-collection .h-c-item{
+	position:absolute;
+	top:0;
+	background-color:white;
+	border:1px solid #eee;
+}
+.h-rg-nav .h-mobile:hover .h-mobile-item{
+	display:block;
+}
+.h-rg-nav .h-mobile-item{
+	position:absolute;
+	top:32px;
+	right:-66px;
+	width:175px;
+	height:214px;
+	display:none;
+	border:1px solid #eee;
+}
+.h-rg-nav .h-mobile-item .h-pic{
+	width:175px;
+	height:175px;
+	background-image:url(../img/mobile.png);
+}
+.h-rg-nav .h-mobile-item .h-text{
+	width:175px;
+	height:73px;
+	background-image:url(../img/mobile.png);
+	background-position:14px -184px;
+	background-repeat:no-repeat;
+}
+.h-rg-nav .h-support {
+	position:absolute;
+	top:31px;
+	left:-1px;
+	width:190%;
+	z-index:-1;
+	border:1px solid #eee;
+	width:205%;
+	display:none;
+}
+.h-seller:hover.h-support{
+	display:block;
+}
+.h-rg-nav .h-support .h-s-shopper a{
+	color:black;
+}
+.h-rg-nav .h-support .h-s-shopper a:hover,.h-s-help a:hover{
+	color:red;
+	text-decoration:underline;
+}
+.h-rg-nav .h-support h3{
+	margin-left:20px;
+	color:#666;
+	font-weight:700;
+}
+.h-rg-nav .h-support .h-s-shopper li{
+	float:none;
+	padding:0;
+	line-height:30px;
+	margin-left:20px;
+}
+.h-rg-nav .h-support .h-s-help li{
+	padding:0;
+	margin-left:20px;
+}
+.h-site-nav .h-menu .h-m-item{
+	padding:0 30px;
+	height:220px;
+	border-right:1px dashed #eee;
+}
+.h-site-nav .h-menu .h-m-item h3{
+	font-size:16px;
+}
+.h-site-nav .h-menu .h-m-item li{
+	float:none;
+	padding:0;
+	line-height:30px;
+}
+.h-site-nav .h-menu .h-m-item a{
+	color:#999;
+}
+.h-site-nav .h-menu .h-m-item a:hover{
+	color:black;
+	text-decoration:underline;
+}
+/*头部主体区域*/
+.h-content{
+	position:relative;
+	margin-top:0!important;
+	height:132px;
+}
+.h-content .h-logo h1{
+	position:relative;
+}
+.h-content .h-logo img{
+	position:absolute;
+	width:290px;
+	height:130px;
+	margin:1px auto;
+	vertical-align: middle;
+	top:0;
+	left:-3%;
+	/*display:block;*/
+}
+.h-content .h-search{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:630px;
+	height:68px;
+	font-size:14px;
+	margin:auto;
+	background-color:white;
+}
+.h-content .h-search input{
+	float:left;
+	outline:none;
+}
+.h-content .h-search [type="text"]{
+	width:490px;
+	height:36px;
+	border:2px solid #FF0036;
+	text-indent:1em;
+}
+.h-content .h-search [type="submit"]{
+	width:136px;
+	height:42px;
+	border:none;
+	font-size:18px;
+	color:white;
+	background-color:#FF0036;
+}
+.h-search .h-sub{
+	line-height:2em;
+}
+.h-search .h-sub a{
+	color:#999;
+	padding:0 12px;
+	border-right:1px solid #999;
+}
+.h-search .h-sub .p0{
+	padding-left:0;
+}
+.h-search .h-sub .bor{
+	border:none;
+}
+.h-search .h-sub .cred{
+	color:red;
+}

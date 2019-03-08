@@ -1,0 +1,20 @@
+@charset "ytf-8";
+i{vertical-align:middle;}
+body{
+	font:12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+/*行高1.5倍*/
+a{text-decoration:none;}
+.clearfix:after{
+	display:block;
+	content:"";
+	clear:both;
+}
+.ml20{margin-left:20px;}
+.mr40{margin-right:40px;}
+.c-9{color:#999;}
+.fl{float:left;}
+.fr{float:right;}
+.wl1230{width:1230px;margin:0 auto;}
+.underline:hover{text-decoration:underline}
+.dashed{border-bottom:1px dashed #eee;}

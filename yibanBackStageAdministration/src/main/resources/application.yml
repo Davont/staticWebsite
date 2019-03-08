@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://180.209.98.88:3306/community
+    username: community
+    password: Njyzyibj_2018
+    driver-class-name: com.mysql.jdbc.Driver
+#  profiles: dev
+server:
+  port: 8081

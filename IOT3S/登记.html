@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta name="viewport" content="width=device-width, height=device-height">
+            <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+            <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+        
+        <title>停车场车辆登记</title>
+        <style type="text/css">
+            html {
+                font-size: 62.5%;
+                font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            }
+            
+            body {
+                font-size: 1.8em;
+                line-height: 3;
+                background-color: #eeeeee;
+            }
+            h3 {
+                font-size: 1.8em;
+                margin-bottom: 3rem;
+                line-height: 1.5;
+                font-weight: 800;
+            }
+            p {
+                margin-bottom: 1.5rem;
+            }
+            .site-container {
+                max-width: 320px;
+                margin: 10px auto;
+                padding-left: 0.6em;
+                padding-right: 0.6em;
+                padding-top: 15%;
+                padding-bottom: 3%;
+            }
+            @media screen and (min-width: 60.063em) {
+                .site-container {
+                    max-width: 400px;
+                }
+            }
+            .card {
+                position: relative;
+                overflow: hidden;
+                background-color: white;
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,0.24), 0 1px 18px 0 rgba(0,0,0,0.12);
+                border-radius: 2px;
+                padding: 1em 1.5em;
+            }
+            .form__wrapper {
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+                display: inline-block;
+                margin-bottom: 1.6rem;
+                width: 100%;
+                vertical-align: top;
+            }
+            .form__wrapper__submit {
+                padding: 1.6rem 0;
+            }
+            #car-id::after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: #0d8aee;
+            }
+            .form__input {
+                display: block;
+                position: relative;
+                margin-top: 1em;
+                padding: 0.84em 0;
+                width: 100%;
+                box-sizing: border-box;
+                color: #444;
+                font-size: 1.6rem;
+                outline: 0;
+                border: none;
+                border-bottom: solid 1px #ddd;
+            }
+            .form__input:focus {
+                background-position: 0 0;
+                color: #444;
+            }
+            .form__label {
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                padding: 0;
+                width: 100%;
+                height: calc(99%);
+                text-align: left;
+                pointer-events: none;
+                color: #999;
+                transition: bottom 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                -moz-transition: bottom 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Firefox 4 */
+                -webkit-transition: bottom 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Safari 和 Chrome */
+                -o-transition: bottom 0.2s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Opera */
+            }
+            .form__label__content {
+                position: absolute;
+            }
+            
+            .btn {
+                width: 100%;
+                display: inline-block;
+                padding: 0.7em 1.5em;
+                border-radius: 2px;
+                background-color: #2196f3;
+                color: #fff;
+                border: 0;
+                outline: none;
+                cursor: pointer;
+                font-family: inherit;
+                font-weight: 400;
+                font-size: 1.6rem;
+                box-shadow: 0 1px 3px 0 rgba(3,30,51,0.24), 0 1px 2px 0 rgba(3,30,51,0.12);
+                transition: all 0.2s ease;
+            }
+            .btn:focus,
+            .btn:hover {
+                background-color: #0d8aee;
+            }
+            #blueline{
+                height: 3px;
+                width: 0;
+                background-color: #0d8aee;
+                transition: width 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                -moz-transition: width 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Firefox 4 */
+                -webkit-transition: width 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Safari 和 Chrome */
+                -o-transition: width 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Opera */
+            }
+            #car-id:focus +#blueline{
+                width: 100%;
+                transition: width 0s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                -moz-transition: width 0s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Firefox 4 */
+                -webkit-transition: width 0s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Safari 和 Chrome */
+                -o-transition: width 0s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Opera */
+            }
+            #car-id:focus ~.form__label{
+               bottom: 16px;
+               font-size: 16px;
+               transition: bottom 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                -moz-transition: bottom 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Firefox 4 */
+                -webkit-transition: bottom 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Safari 和 Chrome */
+                -o-transition: bottom 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);	/* Opera */
+            }
+            .form__input__submit{  
+                animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;  
+            }
+        </style>
+    </head>
+    <body>
+        <section class="site-container">
+            <section class="card">
+                <h3>停车场车辆登记</h3>
+                <form>
+                    <div class="form__wrapper" data-wow-delay="0.6s">
+                        <input type="text" class="form__input" id="car-id" name="car-id">
+                        <div id="blueline"></div>
+                        <label class="form__label" for="car-id">
+                        <span class="form__label__content">车牌号</span>
+                        </label>
+                    </div>
+                    <div class="form__wrapper__submit pulse infinite" data-wow-delay="0.7s">
+                        <div class="form__input__submit">
+                            <button  name="submit" class="btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </section>
+    <script>
+        
+        $('#car-id').focus(function () {
+            $(".form__label").css({"bottom":"16px","font-size":"16px"});
+
+        });
+        $('#car-id').blur(function () {
+            if($("#car-id").val().length){
+                $('.form__input__submit').addClass('animated pulse');
+                $(".form__label").css({"bottom":"16px","font-size":"16px"});
+               
+            }
+            else if($("#car-id").val().length==0){
+                $('.form__input__submit').removeClass('animated pulse');
+                $(".form__label").css({"bottom":"0","font-size":"18px"});
+            }
+        });
+        $('.form__wrapper__submit').click(function () {
+            var vehicleNumber=$("#car-id").val();
+            var express = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/;
+            if($("#car-id").val().length==0){
+                alert('请输入车牌号！');
+            }
+            else if (!express.test(vehicleNumber)){
+                alert('请输入正确的车牌号！');
+
+            }
+            $('.form__input__submit').removeClass('animated pulse');
+            $('.btn').addClass('animated hinge');
+            
+        })
+        
+             
+    </script>

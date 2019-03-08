@@ -1,0 +1,54 @@
+/*主页面样式表，为搜索后展示的专利列表做样式*/
+body{
+    padding-top:50px;
+}
+.sidebar{
+    width: 11%;
+    position: fixed;
+    top: 51px;
+    bottom:0;
+    left:0;
+    z-index:20;
+    display: block;
+    padding:20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color:#f5f5f5;
+    border-right:1px solid #eee;
+}
+.nav-sidebar{
+    margin-right:-21px;
+    margin-bottom:20px;
+    margin-left:-20px;
+}
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+    color:#fff;
+    background-color: #428bca;
+}
+.nav-sidebar > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.pd11{
+    padding-left:11%;
+}
+.center-y{
+    height:43px;
+}
+.mf11{
+    margin-left: 10.5%;
+}
+.mr0{
+    margin-right: 0rem;
+}
+/*使输入框变长*/
+.width-widner1{
+    width:40%!important;
+}
+.width-widner2{
+    width:90%!important;
+}
+.width-widner3{
+    width:100%!important;
+}

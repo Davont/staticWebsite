@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <metaname="screen-orientation"content="portrait"></metaname>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/html2canvas.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <title>预测结果</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            background:url("img/bg.jpg");  
+            filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+            -moz-background-size:100% 100%;  
+            background-size:100% 100%;  
+            background-attachment: fixed;
+        }
+        #result{
+            position: absolute;
+            top: 25%;
+            left: 14%;
+        }
+        #result li img{
+            height: 3rem;
+        }
+        #name{
+            position: absolute;
+            font-size: 1.5rem;
+        }
+        #QR{
+            position: absolute;
+            max-width: 80px!important;
+        }
+    </style>
+</head>
+<body id="view">
+    
+    <script>
+        var posArray=new Array;
+        function getImageRandomPosition(){
+    do {
+        var n = Math.floor(Math.random() * 10);//n为随机出现的0-11之内的数值
+        for (var i = 0; i < posArray.length; i++) {
+            if (n == posArray[i]) { 
+                /*若n和数组里面的数值有重复，立即跳出函数*/
+                break;
+            }
+        }
+　　　　　　　　/*若n和数组里的数组无重复，那么i和数组的长度是相同的，这样可以避免出现重复的数字*/
+        if (i == posArray.length) {
+            posArray.push(n);
+        }
+    }while(posArray.length!=5);
+    console.log(posArray)
+}
+getImageRandomPosition()
+    </script>
+</body>
+</html>

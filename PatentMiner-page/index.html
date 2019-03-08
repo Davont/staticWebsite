@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/patent_list.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>PatentMiner专利搜索</title>
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <!--自适应隐藏导航展开按钮-->
+        <button type="button" class="navbar-toggle clooapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!--导航条LOGO-->
+        <a href="#" class="navbar-brand">PatentMiner</a>
+    </div>
+    <!--导航栏列表-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">搜索</a></li>
+            <li><a href="">分析</a></li>
+            <li><a href="">新世界</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    检索方式
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">简单搜索</a></li>
+                    <li><a href="#">高级搜索</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right mr0">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 登入</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 退出</a></li>
+        </ul>
+    </div>
+</nav>
+<!--logo-->
+<div class="logo">
+    <h1>PatentMiner</h1>
+</div>
+<!--搜索框-->
+<form class="navbar-form navbar-left width-widner1 center-xy" role="search">
+    <div class="form-group width-widner2">
+        <input type="text" class="form-control width-widner3 higher" placeholder="Search" id="searchDate">
+    </div>
+    <button type="submit" class="btn btn-default higher" id="submit">submit</button>
+</form>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/self_adaptation.js"></script>
+<script>
+    $("#submit").click(function(){
+        window.open('patent_list.html');
+    });
+</script>
+</body>
+</html>

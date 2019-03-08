@@ -1,0 +1,844 @@
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>南京邮电大学第四十九届田径运动会</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+<div class="am-g">
+    <!-- 头部 -->
+    <header data-am-widget="header" class="myAppHead am-header am-header-default">
+        <div class="am-header-left am-header-nav">
+            <!-- <a data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}">
+
+              <i class="am-header-icon am-icon-bars"></i>
+            </a> -->
+        </div>
+
+        <h1 class="h-title">
+                南京邮电大学第四十九届田径运动会
+        </h1>
+    </header>
+    <!-- 栏目切换 -->
+    <div data-am-widget="tabs" class="myAppTab am-tabs am-tabs-d2">
+        <ul class="am-tabs-nav am-cf">
+            <li class="am-active"><a href="[data-tab-panel-0]">排行榜</a></li>
+            <li class=""><a href="[data-tab-panel-1]">留言框</a></li>
+            <li class=""><a href="[data-tab-panel-2]">比赛日程</a></li>
+            <li class=""><a href="[data-tab-panel-3]">比赛结果</a></li>
+        </ul>
+        <div class="am-tabs-bd">
+            <div data-tab-panel-0 class="myAppTabPanel am-tab-panel am-active martop">
+                <!-- 排行榜 -->
+                <div class="am-container">
+                    <ul class="am-list am-list-static am-list-border" id="academy">
+                    </ul>
+                </div>
+            </div>
+            <div data-tab-panel-1 class="myAppTabPanel am-tab-panel martop">
+                <div class="comments center">
+                    <form action="">
+                        <div class="am-g">
+                            <div class="am-u-sm-8">
+                                <div class="am-g mar10">
+                                    <div class="am-u-sm-3">
+                                        <label>评论</label>
+                                    </div>
+                                    <div class="am-u-sm-9">
+                                        <textarea class="" rows="3" for="doc-ta-8" style="width: 100%;" id="submitText"></textarea>
+                                    </div>
+                                </div>
+                                <div class="am-g mar10">
+                                    <div class="am-u-sm-3">
+                                        <label>身份</label>
+                                    </div>
+                                    <div class="am-u-sm-9">
+                                        <p>
+                                            <input type="text" class="am-form-field am-radius " id="submitId" placeholder="学号+姓名" />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-u-sm-4">
+                                <button type="button" id="submit" class="am-btn am-btn-primary mar10" style="line-height: 9rem;">提交</button>
+                            </div>
+                            <div class="am-modal am-modal-no-btn" tabindex="-1" id="your-modal">
+                                <div class="am-modal-dialog">
+                                  <div class="am-modal-hd">Modal 标题
+                                    <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+                                  </div>
+                                  <div class="am-modal-bd">
+                                    Modal 内容。
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </form>
+
+                </div>
+                <hr>
+                <ul id="comments">
+                </ul>
+            </div>
+            <div data-tab-panel-2 class="myAppTabPanel am-tab-panel martop">
+                <div class=".am-panel-group">
+                    <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                            <h3 class="am-panel-title">5月19日（上午）</h3>
+                        </div>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>径赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>研女 100 米</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 100 米</td>
+                                <td>10:10</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 100 米</td>
+                                <td>10:20</td>
+                            </tr>
+                            <tr>
+                                <td>研男 100 米</td>
+                                <td>10:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 100 米</td>
+                                <td>10：40</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 100 米</td>
+                                <td>10：50</td>
+                            </tr>
+                            <tr>
+                                <td>研女 1500 米</td>
+                                <td>11：00</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 1500 米</td>
+                                <td>11：10</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 1500 米</td>
+                                <td>11：20</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>田赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>学男甲 铅球</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 跳远</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 跳高</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 掷沙包</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 掷沙包</td>
+                                <td>10：00</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 立定跳远</td>
+                                <td>10：00</td>
+                            </tr>
+                            <tr>
+                                <td>女教老 立定跳</td>
+                                <td>10：30</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 三级跳远</td>
+                                <td>11：10</td>
+                            </tr>
+                            <tr>
+                                <td>研女 跳远</td>
+                                <td>11:10</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>趣味赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>教青 20 米同舟共济</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>女教老 20 米托球跑</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 双人足球</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>教老 男女拾贝</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教老 20 米托球跑</td>
+                                <td>10：15</td>
+                            </tr>
+                            <tr>
+                                <td>教中 20 米同舟共济</td>
+                                <td>10：15</td>
+                            </tr>
+                            <tr>
+                                <td>教青 30 米齐心协力</td>
+                                <td>10：30</td>
+                            </tr>
+                            <tr>
+                                <td>教青 30 米毛毛虫</td>
+                                <td>10：30</td>
+                            </tr>
+                            <tr>
+                                <td>教中 30 米齐心协力</td>
+                                <td>10:45</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                                <td>教中 30 米毛毛虫</td>
+                                <td>10:45</td>
+                            </tr>
+                            <tr>
+                                <td>教青 男女拾贝</td>
+                                <td>10:40</td>
+                            </tr>
+                            <tr>
+                                <td>教中 男女拾贝</td>
+                                <td>11:10</td>
+                            </tr>
+                            <tr>
+                                <td>教工组 鼓动人心</td>
+                                <td>11:10</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="am-panel-footer">备注</div>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                            <h3 class="am-panel-title">5月19日（下午）</h3>
+                        </div>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>径赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>研女 100 米</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 100 米</td>
+                                <td>13:35</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 100 米</td>
+                                <td>13:40</td>
+                            </tr>
+                            <tr>
+                                <td>研男 100 米</td>
+                                <td>13:45</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 100 米</td>
+                                <td>13:50 </td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 100 米</td>
+                                <td>13:55 </td>
+                            </tr>
+                            <tr>
+                                <td>研女 400 米</td>
+                                <td> 14:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 400 米</td>
+                                <td>14:10</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 400 米</td>
+                                <td>14:20</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                                <td>研男 400 米</td>
+                                <td>14:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 400 米</td>
+                                <td>14:40</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 400 米</td>
+                                <td>14:50</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 3000 米</td>
+                                <td>15:10</td>
+                            </tr>
+                            <tr>
+                                <td>研男 3000 米</td>
+                                <td>15:10</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 3000 米</td>
+                                <td>15:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 4×100 米接力</td>
+                                <td>16:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 4×100 米接力</td>
+                                <td>16:05</td>
+                            </tr>
+                            <tr>
+                                <td>研女 4×100 米接力</td>
+                                <td>16:10</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 4×100 米接力</td>
+                                <td>16:15</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 4×100 米接力</td>
+                                <td>16:20</td>
+                            </tr>
+                            <tr>
+                                <td>研男 4×100 米接力</td>
+                                <td>16:25</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 4×100 米接力 </td>
+                                <td>16:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 4×100 米接力</td>
+                                <td>16:35</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>田赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>学男甲 跳远</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 铅球</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 跳高</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 立定跳远</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 掷沙包</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教老 掷沙包</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>男教老 立定跳远</td>
+                                <td>14:00</td>
+                            </tr>
+                            <tr>
+                                <td>女教中 立定跳远</td>
+                                <td>14:20</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 立定跳远</td>
+                                <td>14:40</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                                <td>女教中 掷沙包</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教老 掷沙包</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 铅球</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 三级跳远</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>研男 三级跳远</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>研女 跳高</td>
+                                <td>15:00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>趣味赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>教青 30 米心心相印</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>男教老 一分钟投篮</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 双人羽毛球</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 双人足球</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>教中 30 米心心相印</td>
+                                <td>13:50</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 一分钟投篮</td>
+                                <td>14:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 双人羽毛球</td>
+                                <td>14:10</td>
+                            </tr>
+                            <tr>
+                                <td>男教老 30 米赶牛</td>
+                                <td>14:25</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 30 米赶牛</td>
+                                <td>13:50</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 对踢毽子</td>
+                                <td>14:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教中 一分钟投篮</td>
+                                <td>14:30</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 30 米赶牛</td>
+                                <td>14:40</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 双人羽毛球</td>
+                                <td>14:50</td>
+                            </tr>
+                            <tr>
+                                <td>女教老 30 米赶牛</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>女教中 对踢毽子</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 一分钟投篮</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>女教中 30 米赶牛</td>
+                                <td>15:15</td>
+                            </tr>
+                            <tr>
+                                <td>男教青 对踢毽子</td>
+                                <td>15:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 一分钟投篮</td>
+                                <td>15:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教中 双人羽毛球</td>
+                                <td>15:30</td>
+                            </tr>
+                            <tr>
+                                <td>女教青 30 米赶牛</td>
+                                <td>15:35</td>
+                            </tr>
+                            <tr>
+                                <td>男教中 对踢毽子</td>
+                                <td>16:00</td>
+                            </tr>
+                            <tr>
+                                <td>女教老 一分钟投篮</td>
+                                <td>16:00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="am-panel-footer">备注</div>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                            <h3 class="am-panel-title">5月20日（上午）</h3>
+                        </div>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>径赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>研女 200 米</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 200 米</td>
+                                <td>08:40</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 200 米</td>
+                                <td>08:50</td>
+                            </tr>
+                            <tr>
+                                <td>研男 200 米</td>
+                                <td>09:00</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 200 米</td>
+                                <td>09:10</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 200 米</td>
+                                <td>09:20</td>
+                            </tr>
+                            <tr>
+                                <td>研女 800 米</td>
+                                <td>09:35</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 800 米</td>
+                                <td>09:40</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 800 米</td>
+                                <td>09:45</td>
+                            </tr>
+                            <tr>
+                                <td>研男 800 米</td>
+                                <td>09:55</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 800 米</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 800 米</td>
+                                <td>10:10</td>
+                            </tr>
+                            <tr>
+                                <td>研女 200 米</td>
+                                <td>10:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 200 米</td>
+                                <td>10:35</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 200 米</td>
+                                <td>10:40</td>
+                            </tr>
+                            <tr>
+                                <td>研男 200 米</td>
+                                <td>10:45</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 200 米</td>
+                                <td>10:50</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 200 米</td>
+                                <td>10:55</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>田赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>研男 铅球</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 跳远</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 跳高</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>研女 掷沙包</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 掷沙包</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 引体向上（5 人）</td>
+                                <td>08:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 引体向上（5 人）</td>
+                                <td>09:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 掷沙包</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 掷沙包</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 三级跳远</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 铅球</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 800 米</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>研男 跳高</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>研男 跳远</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>研女 三级跳远</td>
+                                <td>10:00</td>
+                            </tr>
+                            <tr>
+                                <td>研男 引体向上（5 人）</td>
+                                <td>10:30</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="am-panel-footer">备注</div>
+                    </div>
+                    <div class="am-panel am-panel-default">
+                        <div class="am-panel-hd">
+                            <h3 class="am-panel-title">5月20日（下午）</h3>
+                        </div>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>径赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>研男 1500 米</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 1500 米</td>
+                                <td>13:40</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 1500 米</td>
+                                <td>13:50</td>
+                            </tr>
+                            <tr>
+                                <td>研女 4×400 米接力</td>
+                                <td>14:10</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 4×400 米接力</td>
+                                <td>14:20</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 4×400 米接力</td>
+                                <td>14:35</td>
+                            </tr>
+                            <tr>
+                                <td>研男 4×400 米接力</td>
+                                <td>14:50</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 4×400 米接力</td>
+                                <td>15:00</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 4×400 米接力</td>
+                                <td>15:15</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="am-table am-table-bordered am-table-striped am-table-compact">
+                            <thead>
+                            <tr>
+                                <th>田赛</th>
+                                <th>时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>研女 铅球</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男乙 跳远</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 跳高</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>研男 掷沙包</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 掷沙包</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学男甲 三级跳远</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女乙 仰卧起坐（5 人）</td>
+                                <td>13:30</td>
+                            </tr>
+                            <tr>
+                                <td>学女甲 仰卧起坐（5 人）</td>
+                                <td>14:00</td>
+                            </tr>
+                            <tr>
+                                <td>研女 仰卧起坐（5 人）</td>
+                                <td>14:30</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="am-panel-footer">备注</div>
+                    </div>
+                </div>
+            </div>
+            <div data-tab-panel-3 class="myAppTabPanel am-tab-panel ">
+                <ul id="result">
+                </ul>
+                <h2>(查询结果仅供参考，如有不一致，请以体育部公布成绩为准。)</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+<script>
+</script>
+<!-- 侧边栏内容 -->
+<!-- <div id="doc-oc-demo2" class="myAppOffcanvas am-offcanvas">
+  <div class="am-offcanvas-bar">
+    <div class="am-offcanvas-content">
+      <div class="myAppOffcanvasUserIco">
+        <img src="img/userico.jpg" alt="">
+      </div>
+      <div class="myAppOffcanvasUserName">Amaze UI</div>
+      <div class="myAppOffcanvasInfo">New Documentary Showcases the Laborious History of Graphic Design</div>
+      <div class="am-container">
+        <div class="am-g">
+          <div class="am-u-sm-6"><button type="button" class="myAppBtn am-btn am-btn-default am-round am-btn-danger">E-mail</button></div>
+          <div class="am-u-sm-6"><button type="button" class="myAppBtn am-btn am-btn-default am-round am-btn-primary">Password</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="js/amazeui.min.js"></script>
+<script src="js/layer/layer.js"></script>
+<script src="js/sport.js"></script>
+</body>
+
+</html>

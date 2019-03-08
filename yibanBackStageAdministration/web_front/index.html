@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-table/1.12.1/extensions/filter-control/bootstrap-table-filter-control.css"
+        rel="stylesheet">
+    <link href="https://cdn.bootcss.com/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/fileinput.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <title>PC后台产品副本</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="float-l" href="#"><img src="img/logo.png" alt="logo" width="50" height="50"></a>
+                <a class="navbar-brand" href="#">社团后台管理界面</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">招新板块</a></li>
+                    <!-- <li><a href="#">活动专区</a></li> -->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 南邮易班 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href=""><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改信息</a></li>
+                            <li><a href="" aria-controls="b" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-envelope"
+                                        aria-hidden="true"></span> 联系我们</a></li>
+                            <li><a href="" aria-controls="c" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-log-out"
+                                        aria-hidden="true"></span> 退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar nav-stacked nav-tabs siderbar-font">
+                    <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 菜单</li>
+                    <li class="dash"></li>
+                    <li class="active"><a href="#section1" aria-controls="section1" role="tab" data-toggle="tab"><span
+                                class="glyphicon glyphicon-lock" aria-hidden="true"></span> 社团信息</a></li>
+                    <li><a href="#section2" aria-controls="section2" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tags"
+                                aria-hidden="true"></span> 招新信息</a></li>
+                    <li><a href="#section3" aria-controls="section3" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plus"
+                                aria-hidden="true"></span> 报名信息</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div role="tabpanel" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab-pane active"
+                    role="tabpanel" id="section1">
+                    <h3 class="page-header">社团信息</h3>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-2">
+                            <img src="" id="img0" class="img0" style="width: 120px;height:120px;">
+                            <div class="a-upload">
+                                <form id="form01" action="http://180.209.98.88:8488/uploadimage" method="POST">
+                                    <input type="file" id="file0" name="name" class="file0" multiple="multiple" class="" />上传图片
+                                </form>
+
+                            </div>
+                        </div>
+                        <form action="" name="form0" id="form0">
+                            <div class="col-xs-6 col-sm-6 placeholder t-left">
+                                <div class="input-group col-sm-4">
+                                    <span class="input-group-addon" id="sizing-addon1">社团名称</span>
+                                    <input type="text" class="form-control" placeholder="请输入社团名称" aria-describedby="sizing-addon1"
+                                        id="community-name">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 placeholder t-left">
+                                <div class="input-group  col-sm-4">
+                                    <span class="input-group-addon">归属组织:</span>
+                                    <select class="selectpicker" data-live-search="true" data-style="btn-primary"
+                                        data-width="75%" id="belong">
+                                        <option value="校团委">校团委</option>
+                                        <option value="学生工作处（部）">学生工作处（部）</option>
+                                        <option value="校党委宣传部">校党委宣传部</option>
+                                        <option value="保卫处">保卫处</option>
+                                        <option value="就业办">就业办</option>
+                                        <option value="体育部">体育部</option>
+                                        <option value="南京邮电大学档案馆">南京邮电大学档案馆</option>
+                                        <option value="人武部 ">人武部 </option>
+                                        <option value="学生社团联合会">学生社团联合会</option>
+                                        <option value="大学生科学与技术协会 ">大学生科学与技术协会 </option>
+                                        <option value="通信与信息工程学院 ">通信与信息工程学院 </option>
+                                        <option value="电子与光学工程学院、微电子学院">电子与光学工程学院、微电子学院</option>
+                                        <option value="计算机学院、软件学院、网络空间安全学院 ">计算机学院、软件学院、网络空间安全学院 </option>
+                                        <option value="自动化学院、人工智能学院">自动化学院、人工智能学院</option>
+                                        <option value="材料科学与工程学院 ">材料科学与工程学院 </option>
+                                        <option value="物联网学院">物联网学院</option>
+                                        <option value="理学院">理学院</option>
+                                        <option value="地理与生物信息学院 ">地理与生物信息学院 </option>
+                                        <option value="现代邮政学院">现代邮政学院</option>
+                                        <option value="传媒与艺术学院 ">传媒与艺术学院 </option>
+                                        <option value="管理学院">管理学院</option>
+                                        <option value="经济学院">经济学院</option>
+                                        <option value="社会与人口学院">社会与人口学院</option>
+                                        <option value="外国语学院">外国语学院</option>
+                                        <option value="教育科学与技术学院 ">教育科学与技术学院 </option>
+                                        <option value="贝尔英才学院 ">贝尔英才学院 </option>
+                                    </select>
+                                </div>
+
+                            </div>
+                    </div>
+                    </form>
+                    <div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" id="home1" aria-controls="home" role="tab"
+                                    data-toggle="tab">社团信息</a></li>
+                            <li role="presentation"><a href="#profile" id="profile1" aria-controls="profile" role="tab"
+                                    data-toggle="tab">部门信息</a></li>
+                            <li role="presentation"><a href="#messages" id="messages1" aria-controls="messages" role="tab"
+                                    data-toggle="tab">联系方式</a></li>
+                            <li role="presentation"><a href="#settings" id="settings1" aria-controls="settings" role="tab"
+                                    data-toggle="tab">风采展示</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                <h4>社团信息</h4>
+                                <form class="form-horizontal col-md-5 col-md-offset-2">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-4 control-label">指导老师</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" placeholder="请输入指导老师" id="teacher">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-4 control-label">社团介绍</label>
+                                        <div class="col-sm-7">
+                                            <textarea class="form-control" rows="4" placeholder="请输入社团介绍" id="introduction"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-4 control-label">部门数量</label>
+                                        <div class="col-sm-7">
+                                            <select class="selectpicker" data-width="fit" id="department_number">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" id="enrolled" checked="checked">是否需要在易班平台进行新生报名
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button class="btn btn-primary" data-style="primary" id="clubSubmit">下一步</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <h4>部门信息</h4>
+                                <div id="myCarousel" class="carousel slide">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox" data-wrap="false">
+                                        <div class="item active" id="carousel-flag">
+                                            <form class="form-horizontal col-md-5 col-md-offset-2">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-4 control-label">部门1名称</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control" placeholder="请输入部门介绍"
+                                                            id="department_1_name">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">部门1介绍</label>
+                                                    <div class="col-sm-7">
+                                                        <textarea class="form-control" rows="4" placeholder="请输入部门介绍"
+                                                            id="department_1_url"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">部长姓名</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control" placeholder="请输入部长姓名"
+                                                            id="minister_1_name">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">部长联系</label>
+                                                    <div class="col-sm-7">
+                                                        <input type="text" class="form-control" placeholder="请输入部长联系方式"
+                                                            id="minister_1_phone">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-4 col-sm-10">
+                                                        <button type="submit" class="btn btn-primary" data-style="primary"
+                                                            id="next1">下一步(请把所有部门填完)</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="container">
+                                                <div class="carousel-caption" style="display: none;">
+                                                    <h1 style="display: none;">E</h1>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!--左前进右后退-->
+                                    <a class="left carousel-control" href="#myCarousel" rel="external nofollow" rel="external nofollow"
+                                        role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" rel="external nofollow" rel="external nofollow"
+                                        role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="messages">
+                                <h4>联系方式</h4>
+                                <form class="form-horizontal col-md-12">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-6 control-label">社团负责人名称</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class=" form-control o-link" placeholder="请输入信息" id="head_name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-6 control-label">社团负责人QQ</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control o-link" placeholder="请输信息" id="head_qq">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-6 control-label">社团负责人Email</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control o-link" placeholder="请输入信息" id="head_email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-6 control-label">社团官方微博账号</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control o-link" placeholder="请输入信息" id="community_weibo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-5 control-label">社团官方QQ账号</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" placeholder="请输入信息" id="community_qq">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-5 control-label">QQ二维码图片</label>
+                                            <div class="col-sm-6">
+                                                <input type="file" id="file1">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-8 control-label" style="color:red;">图片要求：128像素*128像素</label>
+                                        </div>
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-5 control-label">图片预览</label>
+                                            <div class="col-sm-6">
+                                                <img src="" class="img0" id="img1" style="width: 120px;height:120px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-6 control-label">社团官方微信账号</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" placeholder="请输入信息" id="community_wechat">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-6 control-label">微信二维码图片</label>
+                                            <div class="col-sm-6">
+                                                <input type="file" id="file2">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-8 control-label" style="color:red;">图片要求：128像素*128像素</label>
+                                        </div>
+                                        <div class="col-sm-12 form-group">
+                                            <label for="inputPassword3" class="col-sm-5 control-label">图片预览</label>
+                                            <div class="col-sm-6">
+                                                <img src="" class="img0" id="img2" style="width: 120px;height:120px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-4 col-sm-10">
+                                            <button type="submit" class="btn btn-primary" data-style="primary" id="contactSubmit">下一步</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="settings">
+                                <h4>风采展示</h4>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        请选择您想要展示的往期活动数量:
+                                        <select class="selectpicker col-sm-4" data-style="btn-primary" data-width="fit">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group col-md-10">
+                                            <div class="col-sm-2 ">往期活动URL:</div>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control o-link" placeholder="请输入信息" id="activity-url">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-4 col-sm-10">
+                                            <button class="btn btn-primary" data-style="primary" style="margin-top: 170px;"
+                                                onclick="infoLogin()">保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab-pane" id="section2"
+                    data-toggle="tab">
+                    <div class="container" id="mobile">
+                        <iframe src="mobile-section.html" frameborder="0" width="100%" height="802px"></iframe>
+                    </div>
+                </div>
+                <div role="tabpanel" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main tab-pane" id="section3"
+                    data-toggle="tab">
+                    <form action="" id="toolbar">
+                        <div class="col-sm-3">
+                            <select class="selectpicker" data-style="btn-default" data-width="75%" id="firstApply">
+                                <option value="">第一意向部门</option>
+                                <option value="部门1名称">部门1名称</option>
+                                <option value="部门1名称">部门1名称</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <select class="selectpicker" data-style="btn-default" data-width="75%" id="secondApply">
+                                <option value="">第二意向部门</option>
+                                <option value="部门1名称">部门1名称</option>
+                                <option value="部门1名称">部门1名称</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="姓名/学号" id="otherInfo">
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-default" id="studentSearch">搜索</button>
+                        </div>
+                    </form>
+                    <div class=" right">
+                        <select class="selectpicker" data-style="btn-default" data-width="100%">
+                            <option value="">默认排序</option>
+                            <option value="部门名称">从大到小</option>
+                            <option value="部门名称">从小到大</option>
+                        </select>
+                    </div>
+                    <div class="right clearfix">
+                        <select class="selectpicker" data-style="btn-default" data-width="100%">
+                            <option value="">排序特征</option>
+                            <option value="部门名称">学号</option>
+                            <option value="部门名称">性别</option>
+                            <option value="部门名称">报名时间</option>
+                            <option value="部门名称">报名第一志愿部门</option>
+                            <option value="部门名称">报名第二志愿部门</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12">
+                        <table id="table"></table>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">详情</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">姓名</label>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="text" class="form-control" id="inputEmail3"
+                                                            placeholder="姓名">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">性别</label>
+                                                    <div class="col-sm-8">
+                                                        <select class="selectpicker" data-style="btn-default"
+                                                            data-width="100%">
+                                                            <option value="man">男</option>
+                                                            <option value="woman">女</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">学号</label>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="text" class="form-control" id="inputEmail3"
+                                                            placeholder="学号">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">第一意向部门</label>
+                                                    <div class="col-sm-8 ">
+                                                        <select class="selectpicker" data-style="btn-default"
+                                                            data-width="100%">
+                                                            <option value="">部门名称</option>
+                                                            <option value="">部门名称</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">第二意向部门</label>
+                                                    <div class="col-sm-8 ">
+                                                        <select class="selectpicker" data-style="btn-default"
+                                                            data-width="100%">
+                                                            <option value="">部门名称</option>
+                                                            <option value="">部门名称</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">社团官方微信账号</label>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="text" class="form-control" id="inputEmail3"
+                                                            placeholder="请输入信息">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">个人简介</label>
+                                                    <div class="col-sm-8 ">
+                                                        <textarea class="form-control" rows="3" name=textarea></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">联系发生</label>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="text" class="form-control" id="inputEmail3"
+                                                            placeholder="学号">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 interval">
+                                                    <label for="inputPassword3" class="col-sm-4 control-label">QQ</label>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="text" class="form-control" id="inputEmail3"
+                                                            placeholder="学号">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="img/logo.png" alt="...">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        <button type="submit" class="btn btn-default" data-dismiss="modal">确定</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <script src="js/xlsx.core.min.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.js"></script>
+    <script src="js/tableExport.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/extensions/export/bootstrap-table-export.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.12.0/extensions/editable/bootstrap-table-editable.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/fileinput.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/zh.js"></script>
+
+    <script>
+        $('#clubSubmit').click(function (e) {
+            e.preventDefault();
+            $('#profile1').tab('show')
+            var departmentNumber = $("#department_number option:selected").val();
+            for (let i = 2; i <= departmentNumber; i++) {
+                var carousel = "<div class=\"item\"> " +
+                    " <form class=\"form-horizontal col-md-5 col-md-offset-2\" >" +
+                    "  <div class=\"form-group\">" +
+                    "      <label for=\"inputEmail3\" class=\"col-sm-4 control-label\">部门" + (i) + "名称</label>" +
+                    "    <div class=\"col-sm-7\">" +
+                    "       <input type=\"text\" class=\"form-control\" placeholder=\"请输入部门介绍\" id=\"department_" +
+                    (i) + "_name\">" +
+                    "      </div>" +
+                    "   </div>" +
+                    "    <div class=\"form-group\">" +
+                    "      <label for=\"inputPassword3\" class=\"col-sm-4 control-label\">部门" + (i) +
+                    "介绍</label>" +
+                    "     <div class=\"col-sm-7\">" +
+                    "          <textarea class=\"form-control\" rows=\"4\" placeholder=\"请输入部门介绍\" id=\"department_" +
+                    (i) + "_url\"></textarea>" +
+                    "    </div>" +
+                    "    </div>" +
+                    "   <div class=\"form-group\">" +
+                    "      <label for=\"inputPassword3\" class=\"col-sm-4 control-label\">部长姓名</label>" +
+                    "      <div class=\"col-sm-7\">" +
+                    "          <input type=\"text\" class=\"form-control\"  placeholder=\"请输入部长姓名\" id=\"minister_" +
+                    (i) + "_name\">" +
+                    "      </div>" +
+                    "    </div>" +
+                    "    <div class=\"form-group\">" +
+                    "        <label for=\"inputPassword3\" class=\"col-sm-4 control-label\">部长联系</label>" +
+                    "        <div class=\"col-sm-7\">" +
+                    "            <input type=\"text\" class=\"form-control\"  placeholder=\"请输入部长联系方式\" id=\"minister_" +
+                    (i) + "_phone\">" +
+                    "        </div>" +
+                    "    </div>" +
+                    "    <div class=\"form-group\">" +
+                    "      <div class=\"col-sm-offset-4 col-sm-10\">" +
+                    "        <button type=\"submit\" class=\"btn btn-primary\" data-style=\"primary\" id=\"next" +
+                    (i) + "\">下一步(请把所有部门填完)</button>" +
+                    "      </div>" +
+                    "    </div>" +
+                    "  </form>" +
+                    "  <div class=\"container\">" +
+                    "    <div class=\"carousel-caption\" style=\"display: none;\">" +
+                    "    <h1 style=\"display: none;\">E</h1>" +
+                    "   </div>" +
+                    "    </div>" +
+                    "   </div> ";
+                $("#carousel-flag").before(carousel);
+                if (i != departmentNumber) {
+                    $("#next" + (i)).click(function (e) {
+                        e.preventDefault();
+                        $("#myCarousel").carousel('next');
+                    });
+                } else {
+                    $("#next" + (i)).click(function (e) {
+                        e.preventDefault();
+                        $('#messages1').tab('show')
+                    });
+                }
+
+            }
+            if (departmentNumber == 1) {
+                $("#next1").click(function (e) {
+                    e.preventDefault();
+                    $('#messages1').tab('show')
+                });
+            } else {
+                $("#next1").click(function (e) {
+                    e.preventDefault();
+                    $("#myCarousel").carousel('next');
+                });
+            }
+        })
+        $("#next" + 1).click(function () {
+            $("#myCarousel").carousel('next');
+        });
+        $('#departmentSubmit').click(function (e) {
+            e.preventDefault();
+            $('#messages1').tab('show')
+        })
+        $('#contactSubmit').click(function (e) {
+            e.preventDefault();
+            $('#settings1').tab('show')
+        })
+        $('.carousel').carousel('pause');
+        //手机参数高度适配
+        var mobHeight = window.innerHeight;
+        $("#mobile").height(mobHeight - 90 - 159);
+        $("#input-711").fileinput({
+            uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+            uploadAsync: true,
+            showUpload: false, //是否显示上传按钮
+            language: 'zh', //设置语言
+            maxFileCount: 1,
+            showBrowse: true,
+            browseOnZoneClick: true,
+            //   maxImageWidth: 125,                                  //图片的最大宽度
+            //   maxImageHeight: 125,  
+            allowedFileExtensions: ['jpg', 'png', 'gif'],
+        });
+        $("#input-712").fileinput({
+            uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+            uploadAsync: true,
+            showUpload: false, //是否显示上传按钮
+            language: 'zh', //设置语言
+            maxFileCount: 1,
+            showBrowse: true,
+            browseOnZoneClick: true,
+            allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
+        });
+        $("#input-713").fileinput({
+            uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+            uploadAsync: true,
+            showUpload: false, //是否显示上传按钮
+            language: 'zh', //设置语言
+            maxFileCount: 1,
+            showBrowse: true,
+            browseOnZoneClick: true,
+            allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
+        });
+        $('#section2').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+        $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
+        $(function () {
+
+            //1.初始化Table
+            var oTable = new TableInit();
+            oTable.Init();
+
+            //2.初始化Button的点击事件
+            /* var oButtonInit = new ButtonInit();
+            oButtonInit.Init(); */
+        });
+        var TableInit = function () {
+            var oTableInit = new Object();
+            //初始化Table
+            oTableInit.Init = function () {
+                $('#table').bootstrapTable({
+                    striped: true,
+                    pagination: true,
+                    pageSize: 10,
+                    pageList: [10, 25, 50, 100],
+                    search: true,
+                    searchOnEnterKey: true,
+                    showColumns: true,
+                    showRefresh: true,
+                    showPaginationSwitch: true,
+                    detailView: true,
+                    maintainSelected: true,
+                    searchable: true,
+                    toolbar: "#toolbar",
+                    filterControl: true,
+                    showExport: true,
+                    sortable: true,
+                    sortOrder: 'asc',
+                    detailView: true,
+                    detailFormatter: function (index, row) {
+                        var str = "<div class=\"col-md-1\">";
+                        str += "<a href=\"#\" class=\"thumbnail\">";
+                        str += "<img src=\"img/logo.png\" alt=\"...\">";
+                        str += "</a>";
+                        str += "</div>";
+                        str += "<div class=\"col-sm-8\">";
+                        str +=
+                            "<label for=\"inputPassword3\" class=\"col-sm-2 control-label\" style=\"line-height:35px;\">姓名：</label>";
+                        str += "<div class=\"col-sm-5\">";
+                        str +=
+                            "<input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"请输入信息\">";
+                        str += "</div>";
+                        str += "</div>";
+                        str += "<div class=\"col-sm-8\">";
+                        str +=
+                            "<label for=\"inputPassword3\" class=\"col-sm-2 control-label\" style=\"line-height:35px;\">学号：</label>";
+                        str += "<div class=\"col-sm-5\">";
+                        str +=
+                            "<label for=\"inputPassword3\" class=\"col-sm-2 control-label\" style=\"line-height:35px;\">B180101XX</label>";
+                        str += "</div>";
+                        str += "</div>";
+                        str += "<div class=\"col-sm-12\">";
+                        str +=
+                            "<label for=\"inputPassword3\" class=\"col-sm-2 control-label\" style=\"line-height:35px;\">第一志愿部门：</label>";
+                        str += "<div class=\"col-sm-4\">";
+                        str +=
+                            "<input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"第一志愿部门\">";
+                        str += "</div>";
+                        str +=
+                            "<label for=\"inputPassword3\" class=\"col-sm-2 control-label\" style=\"line-height:35px;\">第二志愿部门：</label>";
+                        str += "<div class=\"col-sm-4\">";
+                        str +=
+                            "<input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"第一志愿部门\">";
+                        str += "</div>";
+                        str += "</div>";
+                        return str;
+                    },
+                    columns: [{
+                        field: 'id',
+                        title: '序号',
+                        formatter: function (value, row, index) {
+                            return index + 1;
+
+                        },
+                        sortable: true,
+                    }, {
+                        field: 'student_id',
+                        title: '学号',
+                        filterControl: "input",
+                        sortable: true,
+                        editable: {
+                            type: 'text',
+                            title: '学号',
+                            validate: function (v) {
+                                if (!v) return '学号不能为空';
+                            }
+                        }
+                    }, {
+                        field: 'gender',
+                        title: '性别',
+                        filterControl: "select",
+                        sortable: true,
+                    }, {
+                        field: 'registration_time',
+                        title: '报名时间',
+                        filterControl: "select",
+                    }, {
+                        field: 'first_intention',
+                        title: '第一意向',
+                        filterControl: "select",
+                    }, {
+                        field: 'second_intention',
+                        title: '第二意向',
+                        filterControl: "select",
+                        sortable: true,
+                    }, {
+                        field: 'contaction',
+                        title: '联系方式',
+                    }, {
+                        field: 'name',
+                        title: '姓名',
+                    }, {
+                        field: 'application_form',
+                        title: '查看报名表',
+                        formatter: function (value, row, index) {
+                            var hml =
+                                "<a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\">查看</a>";
+                            hml += ""
+
+                            return hml;
+
+                        }
+                    }, ],
+                    data: [{
+                        id: 1,
+                        student_id: "B180101XX",
+                        gender: "男",
+                        registration_time: "2017-4-20",
+                        first_intention: "部门名称",
+                        second_intention: "部门名称",
+                        contaction: "152xxxxxxxxx",
+                        name: "小易",
+                    }],
+                    onEditableSave: function (field, row, oldValue, $el) { //提交行内编辑数据
+                        debugger;
+                        console.info(row);
+                        $.ajax({
+                            type: "post",
+                            url: "/test/edit",
+                            /*data: row,*/
+                            data: {
+                                "name": row.name,
+                                "age": row.id
+                            },
+                            dataType: 'JSON',
+                            success: function (data, status) {
+                                if (status == "success") {
+                                    alert('成功');
+                                }
+                            },
+                            error: function () {
+                                alert('失败');
+                            },
+
+                        });
+                    }
+                });
+
+            };
+            //得到查询的参数
+            oTableInit.queryParams = function (params) {
+                var temp = { //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+                    limit: params.limit, //页面大小
+                    offset: params.offset, //页码
+                    sdate: $("#stratTime").val(), //分页
+                    edate: $("#endTime").val(),
+                    sellerid: $("#sellerid").val(),
+                    orderid: $("#orderid").val(),
+                    CardNumber: $("#CardNumber").val(),
+                    maxrows: params.limit,
+                    pageindex: params.pageNumber,
+                    portid: $("#portid").val(),
+                    CardNumber: $("#CardNumber").val(),
+                    tradetype: $('input:radio[name="tradetype"]:checked').val(),
+                    success: $('input:radio[name="success"]:checked').val(),
+                };
+                return temp;
+            };
+            return oTableInit;
+        };
+
+        function getImgUrl(obj) {
+            var objUrl = getObjectURL(obj.files[0]); //获取文件信息  
+            console.log("objUrl = " + objUrl);
+            if (objUrl) {
+                $("#img0").attr("src", objUrl);
+            }
+        }
+        // getImgUrl($("#file0"));
+        // function ProcessFile( e ) {
+        //         var file = document.getElementById('file'+e).files[0];
+        //         if (file) {
+        //             var t;
+        //             var reader = new FileReader();
+        //             reader.onload = function ( event ) {
+        //                 var txt = event.target.result;
+        //                 t=txt;
+        //             };
+        //             //console.log(t);
+
+        //           }
+        //         reader.readAsDataURL( file );
+        // }
+        $("#studentSearch ").click(function () {
+            console.log($("#firstApply option:selected").val())
+            console.log($("#secondApply option:selected").val())
+            console.log($("#otherInfo option:selected").val())
+            $.ajax({
+                url: "http://180.209.98.88:8488/c/application/list",
+                type: 'GET',
+                crossDomain: true,
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: {
+                    "first": $("#firstApply option:selected").val(),
+                    "second": $("#secondApply option:selected").val(),
+                    "other": $("#otherInfo option:selected").val(),
+                },
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (request, errorType, errorMessage) {
+                    console.log(request);
+                }
+            })
+        })
+        var objUrl1;
+        var img0Url;
+        var img1Url;
+        var img2Url;
+        $("#file0").change(function () {
+            objUrl1 = getObjectURL(this.files[0]); //获取文件信息  
+            var file = this.files[0];
+            var formFile = new FormData();
+            formFile.append("action", "UploadVMKImagePath");
+            formFile.append("file", file); //加入文件对象
+            var data = formFile;
+            if (objUrl1) {
+                $("#img0").attr("src", objUrl1);
+            }
+            $.ajax({
+                url: "http://180.209.98.88:8488/uploadimage",
+                type: 'POST',
+                crossDomain: true,
+                cache: false, //上传文件无需缓存
+                processData: false, //用于对data参数进行序列化处理 这里必须false
+                contentType: false, //必须
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+
+                    img0Url = data;
+                },
+                error: function (request, errorType, errorMessage) {
+                    console.log(request);
+                }
+            })
+        });
+
+        $("#file1").change(function () {
+            objUrl2 = getObjectURL(this.files[0]); //获取文件信息  
+            var file = this.files[0];
+            var formFile = new FormData();
+            formFile.append("action", "UploadVMKImagePath");
+            formFile.append("file", file); //加入文件对象
+            var data = formFile;
+            if (objUrl2) {
+                $("#img1").attr("src", objUrl2);
+            }
+            $.ajax({
+                url: "http://180.209.98.88:8488/uploadimage",
+                type: 'POST',
+                crossDomain: true,
+                cache: false, //上传文件无需缓存
+                processData: false, //用于对data参数进行序列化处理 这里必须false
+                contentType: false, //必须
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+
+                    img1Url = data;
+
+                },
+                error: function (request, errorType, errorMessage) {
+                    console.log(request);
+                }
+
+            })
+        });
+        $("#file2").change(function () {
+            objUrl3 = getObjectURL(this.files[0]); //获取文件信息  
+            var file = this.files[0];
+            var formFile = new FormData();
+            formFile.append("action", "UploadVMKImagePath");
+            formFile.append("file", file); //加入文件对象
+            var data = formFile;
+            if (objUrl3) {
+                $("#img2").attr("src", objUrl3);
+            }
+            $.ajax({
+                url: "http://180.209.98.88:8488/uploadimage",
+                type: 'POST',
+                crossDomain: true,
+                cache: false, //上传文件无需缓存
+                processData: false, //用于对data参数进行序列化处理 这里必须false
+                contentType: false, //必须
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+
+                    img2Url = data;
+
+                },
+                error: function (request, errorType, errorMessage) {
+                    console.log(request);
+                }
+            })
+        });
+        //console.log(objUrl1);
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL != undefined) {
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)  
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome  
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+        $.cookie('username', "123");
+        $.cookie('password', "123");
+        $.ajax({
+            url: "http://180.209.98.88:8488/c/login",
+            type: 'POST',
+            data: {
+                //'community_name':"456",
+                //' head_url':objUrl1,
+                'username': '123',
+                'password': '123',
+            },
+            dataType: 'json',
+            success: function (a, b, c) {
+                console.log("登陆成功！")
+            },
+            error: function (request, errorType, errorMessage) {
+                console.log(request);
+            }
+        })
+
+        function infoLogin() {
+            var isTure = $("input[type='checkbox']").is(':checked')
+            var trueInt = 0;
+            if (isTure) {
+                trueInt = 0;
+            } else {
+                trueInt = 1;
+            }
+            let departNum = $("#department_number option:selected").val();
+            let form = new Array();
+            for (let i = 0; i < departNum; i++) {}
+            console.log(img0Url);
+            var img0 = img0Url.data.image_url;
+            var img1 = img1Url.data.image_url;
+            var img2 = img2Url.data.image_url;
+            $.ajax({
+                url: "http://180.209.98.88:8488/c/update",
+                type: 'POST',
+                dataType: 'json',
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: {
+                    'community_name': $("#community-name").val(),
+                    'head_url': img0,
+                    'belong': $("#belong option:selected").val(),
+                    'activity_url': $("#activity-url").val(),
+                    'teacher': $("#teacher").val(),
+                    'introduction': $("#introduction").val(),
+                    'enrolled': trueInt,
+                    'department_number': $("#department_number option:selected").val(),
+                    'department_1_name': $("#department_1_name").val(),
+                    'department_1_url': $("#department_1_url").val(),
+                    'minister_1_name': $("#minister_1_name").val(),
+                    'minister_1_phone': $('#minister_1_phone').val(),
+                    'department_2_name': $("#department_2_name").val(),
+                    'department_2_url': $("#department_2_url").val(),
+                    'minister_2_name': $("#minister_2_name").val(),
+                    'minister_2_phone': $('#minister_2_phone').val(),
+                    'department_3_name': $("#department_3_name").val(),
+                    'department_3_url': $("#department_3_url").val(),
+                    'minister_3_name': $("#minister_3_name").val(),
+                    'minister_3_phone': $('#minister_3_phone').val(),
+                    'department_4_name': $("#department_4_name").val(),
+                    'department_4_url': $("#department_4_url").val(),
+                    'minister_4_name': $("#minister_4_name").val(),
+                    'minister_4_phone': $('#minister_4_phone').val(),
+                    'department_5_name': $("#department_5_name").val(),
+                    'department_5_url': $("#department_5_url").val(),
+                    'minister_5_name': $("#minister_5_name").val(),
+                    'minister_5_phone': $('#minister_5_phone').val(),
+                    'department_6_name': $("#department_6_name").val(),
+                    'department_6_url': $("#department_6_url").val(),
+                    'minister_6_name': $("#minister_6_name").val(),
+                    'minister_6_phone': $('#minister_6_phone').val(),
+                    'department_7_name': $("#department_7_name").val(),
+                    'department_7_url': $("#department_7_url").val(),
+                    'minister_7_name': $("#minister_7_name").val(),
+                    'minister_7_phone': $('#minister_7_phone').val(),
+                    'department_8_name': $("#department_8_name").val(),
+                    'department_8_url': $("#department_8_url").val(),
+                    'minister_8_name': $("#minister_8_name").val(),
+                    'minister_8_phone': $('#minister_8_phone').val(),
+                    'head_name': $("#head_name").val(),
+                    'head_qq': $("#head_qq").val(),
+                    'head_email': $("#head_email").val(),
+                    'community_weibo': $("#community_weibo").val(),
+                    'community_qq': $("#community_qq").val(),
+                    'community_wechat': $("#community_wechat").val(),
+                    'community_qq_url': img1,
+                    'community_wechat_url': img2,
+                },
+                success: function (a, b, c) {
+                    console.log("123");
+                    console.log(a);
+                    console.log(b);
+                    console.log(c);
+                },
+                error: function (request, errorType, errorMessage) {
+                    console.log(request);
+                }
+
+            })
+
+        }
+
+        //问题
+
+        // $.ajax({  
+        //     url: "http://180.209.98.88:8488/c/application/detail", 
+        //     type: 'GET',  
+        //     data: {
+        //         studentId:"B15070400"
+        //     },//{
+        //     //     //'community_name':"456",
+        //     //    //' head_url':objUrl1,
+        //     // //    'username':'123',
+        //     // //    'password':'123',
+        //     // // 'first':'部门1名称',
+        //     // // 'second':'2',
+        //     // // 'other':'B15070400'
+
+        //     // },  
+        //     dataType: 'json',  
+        //     success:function(a,b,c){
+        //         console.log("123");
+        //         console.log(a);
+        //         console.log(b);
+        //         console.log(c);
+        //     },
+        //     error:function(request, errorType, errorMessage) {
+        //         console.log(request);
+        //     }
+
+        //     })
+        //成功
+
+        // document.getElementById("file0").addEventListener('change',readFile,false);
+        // function readFile(){ 
+        //     var file = document.getElementById("file0").files[0];
+        //     var file_json = JSON.stringify(file);
+        //     console.log(file_json); //打印出来是: {}
+        //     console.log(file); 
+        //     var data = new FormData($('#form0')[0]); 
+        //     console.log(data)
+
+        // }
+
+        // $.ajax({  
+        //     url: "http://180.209.98.88:8488/image", 
+        //     type: 'GET',  
+        //     data: {"name":"fff989ae59b4f3e6f08933bc1b.jpg"},//{
+        //     //     //'community_name':"456",
+        //     //    //' head_url':objUrl1,
+        //     // //    'username':'123',
+        //     // //    'password':'123',
+        //     // // 'first':'部门1名称',
+        //     // // 'second':'2',
+        //     // // 'other':'B15070400'
+
+        //     // },  
+        //     dataType: 'json',  
+        //     success:function(a,b,c){
+        //         console.log("123");
+        //         console.log(a);
+        //         console.log(b);
+        //         console.log(c);
+        //     },
+        //     error:function(request, errorType, errorMessage) {
+        //         console.log(request);
+        //     }
+
+        // })
+        // $.ajax({  
+        //     url: "http://180.209.98.88:8488/c/department", 
+        //     type: 'GET',  
+        //     data: {
+        //         //'community_name':"456",
+        //        //' head_url':objUrl1,
+        //        'community_id':'123',
+        //        'department_name':'部门1名称',
+        //     },  
+        //     dataType: 'json',  
+        //     success:function(a,b,c){
+        //         console.log("123");
+        //         console.log(a);
+        //         console.log(b);
+        //         console.log(c);
+        //     },
+        //     error:function(request, errorType, errorMessage) {
+        //         console.log(request);
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

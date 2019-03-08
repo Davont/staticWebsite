@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html{
+            font-size:100px;
+            font-size:calc(1000vw/32);
+            background-color:#E1E1E1;
+        }  
+        @media all and (max-width:unit*5-10px){  
+            html{
+                font-size:100px;
+            }  
+        }  
+        @media all and (min-width:640px){  
+            html{
+                font-size:200px;
+            }  
+        }  
+        body{
+            min-width:unit*5-10px;
+            max-width:640px;
+            margin:0 auto;
+            color:#333;
+            padding:0;
+            font:normal .12em/1.6 "Microsoft YaHei",Verdana,Tahoma;
+            background-color:#eee;
+        }
+        @media screen and (max-width: 600px) { 
+            html{
+                width:100%;
+            }
+            #canvas{
+            margin-top: 40%!important;
+            }
+            #ball{
+                margin: 10% auto;
+            }
+        }
+        #pic{
+            display: none;
+        }
+        
+        #canvas{
+            border:1px solid gray;
+            background-color: rgb(58,57,56);
+            display: block;
+            margin:0 auto;
+        }
+        div{
+            width:100%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.5rem;
+        }
+    </style>
+    <title>停车场</title>
+    <script type="text/javascript">
+        function $$(id) {
+            return document.getElementById(id);
+        }
+        var str="r05f04l03f.5";
+        var arr=[];
+        var xt=0,yt=0,temp=0;
+        for(var i=0;i<str.length;i+=3){
+            if(str[i]=="r"){
+                xt+=Number(str[i+1]+str[i+2]);
+                arr[temp]=xt;
+                temp+=3;
+            }
+            else if(str[i]=="f"){
+                yt+=Number(str[i+1]+str[i+2]);
+                arr[temp]=yt;
+                temp+=3;
+            }
+            else if(str[i]=="l"){
+                xt-=Number(str[i+1]+str[i+2]);
+                arr[temp]=xt;
+                temp+=3;
+            }
+        }
+        window.onload=function(){
+            var cnv=$$("canvas");
+            var cxt=cnv.getContext("2d");
+            var unit=66;
+            cxt.lineWidth=2;
+            var x=x1=50,y=y1=700;
+            var tt=0;
+            (function frame() {
+                window.requestAnimationFrame(frame);
+                var image=$$("pic");                            
+                cxt.clearRect(0, 0, cnv.width, cnv.height);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                cxt.beginPath();
+                //cxt.drawImage(image, x, y);
+                cxt.arc(x,y,10,0,360*Math.PI/180,true);
+                cxt.closePath();
+                cxt.fillStyle="#6699FF";
+                cxt.fill();
+                cxt.beginPath();
+                cxt.closePath();
+                cxt.fillStyle="#FFF";
+                cxt.fill();
+                        if(arr[tt]==0){
+                             ttb=tt+3;
+                             if(ttb>tt){
+                                 tt+=3;
+                             }
+                         }
+                        else if(str[tt]=="r"&&(arr[tt]!=0)&&(x<=arr[tt]*unit)){
+                             x+=2;
+                         }
+                        else if(str[tt]=="l"&&arr[tt]!=0&&(x<=arr[tt]*unit)){
+                             x-=2;
+                         }
+                        else if((str[tt]="f")&&arr[tt]!=0&&(y>=arr[tt]*unit)){
+                             y-=2;
+                         }              
+                $$("ball").innerHTML="无人机坐标：("+x+","+y+").";
+            cxt.beginPath();
+            for(var i=0;i<4;i++){
+                for(var j=0;j<2;j++){
+                    cxt.moveTo(2*unit+(i*unit+j*unit*5),0);
+                    cxt.lineTo(2*unit+(i*unit+j*unit*5),3*unit);
+                    if(j==0&&i!=3){
+                        cxt.font='18px normal sans-serif';
+                        cxt.strokeStyle="white";
+                        if(i==2){
+                            cxt.strokeText("A"+(2),unit*2.35+unit*i,50);
+                        }
+                        else if(i==0){
+                            cxt.strokeText("A"+(i+1),unit*2.35+unit*i,50);
+                        }
+                        cxt.strokeText("A"+(i+3),unit*2.35+unit*i,50+unit*1.5);
+                    }
+                    else if(j==1&&i!=3){
+                        cxt.font='18px normal sans-serif';
+                        cxt.strokeStyle="white";
+                        if(i==2){
+                            cxt.strokeText("B"+(2),unit*2.35+unit*i+unit*j*5,50);
+                        }
+                        else if(i==0){
+                            cxt.strokeText("B"+(i+1),unit*2.35+unit*i+unit*j*5,50);
+                        }
+                        cxt.strokeText("B"+(i+4),unit*2.35+unit*i+unit*j*5,50+unit*1.5);
+                    }
+                    if(i==0){
+                        cxt.moveTo(unit*2+(j*unit*5),unit*3);
+                        cxt.lineTo(142+(j*unit*5),unit*3);
+                    }
+                    else if(i==3){
+                        cxt.moveTo(unit*5-10+(j*unit*5),unit*3);
+                        cxt.lineTo(unit*5+(j*unit*5),unit*3);
+                    }
+                    else{
+                        cxt.moveTo(122+(i*unit+j*unit*5),unit*3);
+                        cxt.lineTo(142+(i*unit+j*unit*5),unit*3);
+                    }
+                }
+            }
+            for(var i=0;i<2;i++){
+                cxt.moveTo(2*unit+(i*unit*5),unit*1.5);
+                cxt.lineTo(5*unit+(i*unit*5),unit*1.5);
+            }
+            for(var i=0;i<2;i++){
+                cxt.moveTo(231+(i*unit*5),unit*5);
+                cxt.lineTo(231+(i*unit*5),unit*9);
+            }
+            for(var i=0;i<5;i++){
+                for(var j=0;j<2;j++){
+                    cxt.moveTo(unit*2+(j*unit*5),unit*5+(i*unit));
+                    cxt.lineTo(unit*5+(j*unit*5),unit*5+(i*unit));
+                    if(j==0&i!=4){
+                        cxt.font='18px normal sans-serif';
+                        cxt.strokeStyle="white";
+                        cxt.strokeText("C"+(i+1),unit*2.6,unit*5.6+unit*i);
+                        cxt.strokeText("C"+(i+5),unit*2.9+unit,unit*5.6+unit*i);
+                    }
+                    else if(j==1&i!=4){
+                        cxt.font='18px normal sans-serif';
+                        cxt.strokeStyle="white";
+                        cxt.strokeText("D"+(i+1),unit*2.6+j*unit*5,unit*5.6+unit*i);
+                        cxt.strokeText("D"+(i+5),unit*2.9+unit+j*unit*5,unit*5.6+unit*i);
+                    }
+                    if(i==0){
+                        cxt.moveTo(unit*2+(j*unit*5),unit*5);
+                        cxt.lineTo(unit*2+(j*unit*5),unit*5+10);
+                        cxt.moveTo(unit*5+(j*unit*5),unit*5);
+                        cxt.lineTo(unit*5+(j*unit*5),unit*5+10);
+                    }
+                    else if(i==4){
+                        cxt.moveTo(unit*2+(j*unit*5),unit*8.85);
+                        cxt.lineTo(unit*2+(j*unit*5),unit*9);
+                        cxt.moveTo(unit*5+(j*unit*5),unit*8.85);
+                        cxt.lineTo(unit*5+(j*unit*5),unit*9);
+                    }
+                    else{
+                        cxt.moveTo(unit*2+(j*unit*5),unit*5-10+(i*unit));
+                        cxt.lineTo(unit*2+(j*unit*5),unit*5+10+(i*unit));
+                        cxt.moveTo(unit*5+(j*unit*5),unit*5-10+(i*unit));
+                        cxt.lineTo(unit*5+(j*unit*5),unit*5+10+(i*unit));
+                    }
+                }
+            }
+            cxt.fillStyle='#FFF';
+            for(var i=0;i<2;i++){
+                for(var j=0;j<3;j++){
+                    
+                    cxt.fillRect(55+unit*5*j,80+unit*5.5*i,8,70);
+                }
+            }
+            for(var i=0;i<2;i++){
+                for(var j=0;j<2;j++){
+                    cxt.fillRect(200+unit*5*i,250+unit*6*j,70,8);
+                }
+            }
+            cxt.fillStyle='#D3D3D3';
+            cxt.strokeText("出入口",10,680);
+            
+            cxt.fillStyle='#FFF';
+            cxt.closePath();
+            cxt.stroke();
+        })();
+        confirm("准备好出发了！");
+        setInterval(function(){
+            run(cxt);
+        }, 50);
+        var speed=0;
+        function run(cxt){
+            speed-=1;
+        }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="700"></canvas>
+    <img id="pic" src="point.png" alt="">
+    <div id="ball"></div>
+</body>
+</html>
